@@ -1,0 +1,875 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+    overflow-x: visible; /* Prevents horizontal scrolling */
+    text-transform: none;
+}
+
+/* ---------- NAVBAR (MBËRTHYER NË FOTO) ---------- */
+/* ---------- NAVBAR (STIL I RIPËRSHITUR) ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 8%; /* Më i ngushtë vertikalisht */
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-left: -1.9rem; 
+    height: 150px; /* Logo më e madhe */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Animacion hover për logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem; 
+    margin-right: -1.5%;/* Hapësirë më e vogël midis linkeve */
+}
+
+.nav-links a {
+    color: #433939 ;
+    text-decoration: none;
+    font-weight: 600; /* Tekst më i trashë */
+    font-size: 1rem; /* Madhësi pak më e vogël */
+    padding: 0.4rem 0.8rem; /* Padding më kompakt */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3e2f2f ;
+   
+    transform: translateY(-2px); /* Efekt hover më dinamik */
+}
+/* ---------- HERO SECTION (STILIZIM NË FOTO) ---------- */
+.hero-section {
+    height: 100vh;
+    background: 
+        linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), /* Gradient i errët */
+        url('vrshl2.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Hapësirë për navbar */
+    
+}
+
+
+
+.hero-content {
+    width: 60%;                  /* Gjerësia e plotë e ekranit */
+    height: 33vh;                /* 25% e lartësisë së ekranit */
+    background: rgba(5, 169, 244, 0.4); /* Sfondi me transparencë */
+    font-weight: 400;            /* Pesha e fontit si në foto */
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3); /* Hije në pjesën e sipërme */
+    padding: 5rem;               /* Padding */
+    position: absolute;          /* Pozicion absolut brenda hero-section */
+    bottom: 20%;                 /* Vendos në fund */
+    left: 0;                     /* Fillon nga e majta */
+    text-align: left;            /* Teksti në të majtë */
+   font-weight: bolder;
+   overflow: hidden;
+}
+
+.hero-content p {
+    color: rgb(255, 255, 255);   /* Ngjyra e tekstit si në foto */
+    font-size: 28px;             /* Madhësia e fontit si në foto */
+    line-height: 36px;           /* Lartësia e rreshtit si në foto */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Hije teksti */
+    max-width: 800px;            /* Kufizoni për lexim më të qartë */
+    display: -webkit-box;        /* Kufizimi i tekstit në 3 rreshta */
+    -webkit-line-clamp: 3;       /* Kufizimi në 3 rreshta */
+    -webkit-box-orient: vertical;
+    overflow: hidden;            /* Fshih tekstin që tejkalon 3 rreshtat */
+    margin-left: 4.2rem;           /* Shty kutinë e tekstit në të djathtë */
+        display: flex;
+        align-items: center; /* Vendos tekstin në mes vertikalisht */
+     position: relative;
+     flex-direction: column;
+}
+/* ---------- RESPONSIVE ---------- */
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 100px; 
+    overflow: hidden;
+}
+
+.card {
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card .text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0); /* Initially no background color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card:hover .text-content {
+    background-color: rgba(0, 162, 155, 0.7); /* Semi-transparent overlay color on hover */
+}
+
+.card:hover img {
+    opacity: 0.7; 
+}
+
+.card h2 {
+    position: absolute;
+    margin: 0;
+    top: 10%;
+    padding: 10px 0;
+    font-size: 24px;
+
+}
+
+.card p {
+    margin: 0;
+    position: absolute;
+    bottom: 20%;
+    font-size: 16px;
+
+}
+
+.card:hover {
+    transform: scale(1.05); /* Smooth zoom effect on hover */
+}
+
+.card.card-1 {
+    border: solid 3px #00a29b;
+    margin-right: -230px;
+}
+
+.card.card-2 {
+    border: solid 3px #f29232;
+}
+
+.card.card-3 {
+    border: solid 3px #1d9bd4;
+    margin-left: -230px;
+}
+
+.card.card-1:hover .text-content {
+    background-color: rgb(0, 162, 155,0.3); /* Custom overlay color for card 1 */
+}
+
+.card.card-2:hover .text-content {
+    background-color: rgb(242, 146, 50,0.3); /* Custom overlay color for card 2 */
+}
+
+.card.card-3:hover .text-content {
+    background-color: rgb(22, 157, 219,0.3); /* Custom overlay color for card 3 */
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 100vh; /* Lartësia e plotë e ekranit */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(145, 218, 251, 1); /* Blu */
+    color: rgb(0, 0, 0);
+    text-align: center;
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+.slide img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.slide-content {
+    max-width: 1100px;
+}
+
+/* Rritja e madhësisë së fontit dhe line-height */
+.slide h1 {
+    font-size: 2.5em; /* Madhësi më e madhe për titullin */
+    margin-bottom: 20px; /* Hapësirë midis titullit dhe përmbajtjes */
+    line-height: 1.5; /* Hapësirë midis rreshtave për titullin */
+    margin-top: 50px;
+}
+
+
+
+
+.slide h2 {
+    font-size: 2em; /* Madhësi më e madhe për nëntitullin */
+    margin-bottom: 15px; /* Hapësirë midis nëntitullit dhe paragrafit */
+    line-height: 1.5; /* Hapësirë midis rreshtave për nëntitullin */
+}
+
+.slide p {
+    font-weight: 400;
+    font-size: 19px; /* Madhësi më e madhe për paragrafin */
+    line-height: 1.1; /* Hapësirë më e madhe midis rreshtave për paragrafin */
+}
+
+.nav-controls {
+    position: absolute;
+    top:30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Qendro butonat dhe vijën vertikalisht */
+    transform: translateY(-50%);
+}
+
+/* Stilizimi i butonave */
+.nav-controls button {
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 34px;
+}
+
+
+            /* Stilizimi i dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+
+.dropdown-content a {
+    color: #433939;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3e2f2f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: #433939;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-top: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ndrysho në inline-block për rreshtim të saktë */
+}
+
+.dropbtn:hover {
+    color: #3e2f2f;
+    transform: translateY(-2px);
+}
+
+
+.container {
+    max-width: 1200px;
+    margin-top: 150px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; /* Zvogëluam hapësirën mes kolonave */
+    flex-wrap: wrap; /* Lejojmë rrethat të kalojnë në rreshta kur ka nevojë */
+    margin-bottom: 0; /* Heqim çdo hapësirë të zbrazët poshtë */
+}
+
+.col {
+    flex: 0 0 18%; /* Rregullojmë përqindjen që të mbushin hapësirën më mirë */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0; /* Heqim margjinën poshtë */
+}
+
+.circle-container {
+    position: relative;
+    width: 150px; /* Madhësia më e vogël për të zvogëluar hapësirën */
+    height: 150px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.circle-svg {
+    transform: rotate(-90deg);
+}
+
+.circle-bg {
+    fill: none;
+    stroke: #f29232;
+    stroke-width: 20;
+}
+
+.circle-progress {
+    fill: none;
+    stroke: #1d9bd4;
+    stroke-width: 20;
+    stroke-linecap: butt;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.circle-text {
+    position: absolute;
+    top: 50%; /* Pozicionimi vertikal në qendër */
+    left: 50%; /* Pozicionimi horizontal në qendër */
+    /* transform: translate(-50%, -50%); Përdorim translate për të sjellë tekstin në qendër */
+    font-weight: 800;
+    color: black;
+    font-size: 80px;
+    white-space: nowrap;
+}
+
+.circle-label {
+    text-align: center;
+    margin-top: 10px; /* Përdorim një margjinë më të vogël për të mbajtur hapësirën të balancuar */
+    font-size: 18px;
+    color: #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.my-5 {
+    margin: 2rem 0;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background: #ccc;
+    margin: 2rem 0;
+}
+
+
+.circle-text21::after {
+    content: "58.8%";
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+    white-space: nowrap;
+    transition: font-size 0.5s ease, font-weight 0.5s ease; /* Smooth transition */
+}
+
+/* Apply hover effect on the entire circle */
+.circle-container:hover .circle-text21::after {
+    content: "451 përfitues";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.circle-text22::after {
+    content: "88.8%";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+    white-space: nowrap;
+    transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+
+/* Apply hover effect on the entire circle */
+.circle-container:hover .circle-text22::after {
+    content: "683 përfitues";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.circle-text23::after {
+    content: "71.1%";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+    white-space: nowrap;
+    transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+
+/* Apply hover effect on the entire circle */
+.circle-container:hover .circle-text23::after {
+    content: "547 përfitues";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.circle-text24::after {
+    content: "100%";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    color: black;
+    font-size: 40px;
+    white-space: nowrap;
+    transition: font-size 0.5s ease, font-weight 0.5s ease;
+}
+
+/* Apply hover effect on the entire circle */
+.circle-container:hover .circle-text24::after {
+    content: "770 përfitues";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.blankw{
+    height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger button – shfaqet vetëm në mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #433939;
+}
+
+/* Responsive për pajisje të vogla (telefon, tablet) */
+@media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: #81d4fa; /* Ngjyra si në foto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links a {
+      color: #000;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      display: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown .dropbtn:focus + .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #433939; /* Ngjyra sipas dizajnit tënd */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+  
+  /* Sigurohu që kjo pjesë është aktive vetëm në mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN (TABLET & MOBILE) ========== */
+
+@media (max-width: 1024px) {
+    .hero-content {
+      width: 80%;
+      padding: 3rem;
+      bottom: 15%;
+    }
+  
+    .hero-content p {
+      font-size: 22px;
+      margin-left: 2rem;
+      line-height: 32px;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+  
+    .card {
+      margin: 20px 0;
+      width: 80%;
+      height: 300px;
+    }
+  
+    .card.card-1,
+    .card.card-3 {
+      margin: 0;
+    }
+  
+    .slider .slide {
+      padding: 20px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .logo {
+      height: 100px;
+    }
+  
+    .hero-content {
+      width: 90%;
+      padding: 2rem;
+      height: auto;
+      bottom: 10%;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  
+    .card {
+      height: 280px;
+    }
+  
+    .slide h1 {
+      font-size: 2rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slide p {
+      font-size: 16px;
+    }
+  
+    .nav-controls button {
+      font-size: 28px;
+      color: black;
+    }
+  
+    .row {
+      justify-content: center;
+    }
+  
+    .col {
+      flex: 0 0 40%;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 1rem;
+      bottom: 5%;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+      margin-left: 0.5rem;
+      text-align: center;
+    }
+  
+    .card {
+      width: 90%;
+      height: 250px;
+    }
+  
+    .slide h1 {
+      font-size: 1.6rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slide p {
+      font-size: 14px;
+    }
+  
+    
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  

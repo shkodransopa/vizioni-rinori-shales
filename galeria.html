@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="footer.css">
+
+    <title>Galeria</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            font-size: 2rem;
+            margin-top: 230px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+
+        }
+        .gallery img, .gallery iframe {
+            width: 420px; /* Rritja e gjerësisë së videove */
+            height: 230px; /* Rritja e lartësisë së videove */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .video-link {
+            display: block;
+            margin: 10px 0;
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 1rem;
+            position: relative;
+        }
+        .video-link:hover {
+            text-decoration: underline;
+        }
+        .video-thumbnail {
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+
+/* ---------- NAVBAR (MBËRTHYER NË FOTO) ---------- */
+/* ---------- NAVBAR (STIL I RIPËRSHITUR) ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 8%; /* Më i ngushtë vertikalisht */
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-left: -1.9rem; 
+    height: 150px; /* Logo më e madhe */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Animacion hover për logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem; 
+    margin-right: -1.5%;/* Hapësirë më e vogël midis linkeve */
+}
+
+.nav-links a {
+    color: #433939 ;
+    text-decoration: none;
+    font-weight: 600; /* Tekst më i trashë */
+    font-size: 1rem; /* Madhësi pak më e vogël */
+    padding: 0.4rem 0.8rem; /* Padding më kompakt */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3e2f2f ;
+   
+    transform: translateY(-2px); /* Efekt hover më dinamik */
+}
+        .text-section {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .text-section h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .achievements {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .achievements h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .achievements h3 {
+            color: #2980b9;
+            margin-top: 20px;
+        }
+
+        .achievements p {
+            color: #34495e;
+            line-height: 1.6;
+        }
+
+        .achievements ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .achievements ul li {
+            margin-bottom: 10px;
+        }
+
+        .text-div, .text-div1, .text-div2 {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin: 0 200px;
+}
+
+.text-div p, .text-div1 p, .text-div2 p {
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+
+
+
+            
+
+            /* Stilizimi i dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #433939;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3e2f2f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: #433939;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ndrysho në inline-block për rreshtim të saktë */
+}
+
+.dropbtn:hover {
+    color: #3e2f2f;
+    transform: translateY(-2px);
+}
+
+.VY{
+    color: #1D9BD4;
+    margin-bottom: 30px;
+    margin-top: 200px; /* Shton distancë nga elementet e tjera */
+}
+
+.VF{
+    color: #1D9BD4;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+/* ======================== RESPONSIVE DESIGN ======================== */
+
+/* Për ekranet më të vogla se 1200px */
+@media (max-width: 1200px) {
+    .container {
+        margin: 0 100px;
+    }
+
+    .gallery img, .gallery iframe {
+        width: 100%;
+        height: auto;
+    }
+
+  
+}
+
+/* Për tablet (më të vogla se 992px) */
+@media (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+
+
+}
+
+/* Për mobile (më të vogla se 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+        margin-top: 150px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 0 20px;
+        padding: 10px;
+    }
+
+  
+
+    .text-section, .achievements {
+        margin: 30px 10px;
+        padding: 15px;
+    }
+}
+
+/* Për ekranet shumë të vogla (nën 480px) */
+@media (max-width: 480px) {
+    .gallery img, .gallery iframe {
+        width: 90%;
+        height: auto;
+    }
+
+    .text-div p, .text-div1 p, .text-div2 p {
+        font-size: 1em;
+    }
+
+    .dropdown-content {
+        min-width: 100%;
+    }
+
+    .dropdown-content a {
+        font-size: 0.85rem;
+    }
+
+    .dropbtn {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger button – shfaqet vetëm në mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #433939;
+}
+
+/* Responsive për pajisje të vogla (telefon, tablet) */
+@media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: #81d4fa; /* Ngjyra si në foto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links a {
+      color: #000;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      display: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown .dropbtn:focus + .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #433939; /* Ngjyra sipas dizajnit tënd */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+  
+  /* Sigurohu që kjo pjesë është aktive vetëm në mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN (TABLET & MOBILE) ========== */
+
+@media (max-width: 1024px) {
+    .hero-content {
+      width: 80%;
+      padding: 3rem;
+      bottom: 15%;
+    }
+  
+    .hero-content p {
+      font-size: 22px;
+      margin-left: 2rem;
+      line-height: 32px;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+  
+    .card {
+      margin: 20px 0;
+      width: 80%;
+      height: 300px;
+    }
+  
+    .card.card-1,
+    .card.card-3 {
+      margin: 0;
+    }
+  
+    .slider .slide {
+      padding: 20px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .logo {
+      height: 100px;
+    }
+  
+    .hero-content {
+      width: 90%;
+      padding: 2rem;
+      height: auto;
+      bottom: 10%;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  
+    .card {
+      height: 280px;
+    }
+  
+    .slide h1 {
+      font-size: 2rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slide p {
+      font-size: 16px;
+    }
+  
+    .nav-controls button {
+      font-size: 28px;
+      color: black;
+    }
+  
+    .row {
+      justify-content: center;
+    }
+  
+    .col {
+      flex: 0 0 40%;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 1rem;
+      bottom: 5%;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+      margin-left: 0.5rem;
+      text-align: center;
+    }
+  
+    .card {
+      width: 90%;
+      height: 250px;
+    }
+  
+    .slide h1 {
+      font-size: 1.6rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slide p {
+      font-size: 14px;
+    }
+  
+    
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar (Mbetet i fiksuar mbi foto) -->
+    <nav class="navbar">
+        <div class="nav-container">
+          <a href="./index.html"><img src="logo.png" alt="URSH Logo" class="logo" /></a>
+          
+          <label class="hamburger">
+            <input type="checkbox" id="hamburger-toggle" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          
+      
+          <!-- Nav links -->
+          <div class="nav-links" id="nav-links">
+            <a href="./index.html">Ballina</a>
+            <a href="./home.html">Rreth nesh</a>
+            <a href="./projektet.html">Projektet</a>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Lajmet &#8595;</a>
+              <div class="dropdown-content">
+                <a href="./lajmet.html">VRSH në media</a>
+                <a href="./lajmetefundit.html">Lajmet e fundit</a>
+                <a href="./raportedhepublikime.html">Raporte dhe publikime</a>
+              </div>
+            </div>
+            <a href="./galeria.html">Galeria</a>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <script>
+        const toggle = document.getElementById("hamburger-toggle");
+        const navLinks = document.getElementById("nav-links");
+      
+        toggle.addEventListener("change", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+    <h1 class="VY">Videot e YouTube</h1>
+    <div class="gallery">
+        <a href="https://www.youtube.com/watch?v=wq2N4tbCGck" target="_blank">
+            <img src="https://img.youtube.com/vi/wq2N4tbCGck/0.jpg" alt="YouTube Video 1" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=omaunO2tZtg" target="_blank">
+            <img src="https://img.youtube.com/vi/omaunO2tZtg/0.jpg" alt="YouTube Video 2" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=bkzGHX2vC5o" target="_blank">
+            <img src="https://img.youtube.com/vi/bkzGHX2vC5o/0.jpg" alt="YouTube Video 3" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=cleYgDySyM4" target="_blank">
+            <img src="https://img.youtube.com/vi/cleYgDySyM4/0.jpg" alt="YouTube Video 4" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=E8Ab8J3ljQQ" target="_blank">
+            <img src="https://img.youtube.com/vi/E8Ab8J3ljQQ/0.jpg" alt="YouTube Video 5" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=Dmr_CCbunAo" target="_blank">
+            <img src="https://img.youtube.com/vi/Dmr_CCbunAo/0.jpg" alt="YouTube Video 6" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=xsmRs9Bsrp4" target="_blank">
+            <img src="https://img.youtube.com/vi/xsmRs9Bsrp4/0.jpg" alt="YouTube Video 7" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=nE7nD5ILYyQ" target="_blank">
+            <img src="https://img.youtube.com/vi/nE7nD5ILYyQ/0.jpg" alt="YouTube Video 8" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=F0-TyeGerqg" target="_blank">
+            <img src="https://img.youtube.com/vi/F0-TyeGerqg/0.jpg" alt="YouTube Video 9" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.youtube.com/watch?v=ykCwM00Tyug" target="_blank">
+            <img src="https://img.youtube.com/vi/ykCwM00Tyug/0.jpg" alt="YouTube Video 10" class="video-thumbnail">
+            
+        </a>
+    </div>
+        <h1 class="VF">Videot e Facebook</h1>
+    <div class="gallery">
+        <a href="https://www.facebook.com/vizionirinorishales/videos/302071440843678" target="_blank">
+            <img src="./assets/FB1.JPG" alt="Facebook Video 1" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/479785313135513" target="_blank">
+            <img src="./assets/FB2.JPG" alt="Facebook Video 2" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/596704408175348" target="_blank">
+            <img src="./assets/FB3.JPG" alt="Facebook Video 3" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/1147896702407494" target="_blank">
+            <img src="./assets/FB4.jpg" alt="Facebook Video 4" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/1455786868681784" target="_blank">
+            <img src="./assets/FB5.JPG" alt="Facebook Video 5" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/1473277586609181" target="_blank">
+            <img src="./assets/FB6.JPG" alt="Facebook Video 6" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/4014821518753835" target="_blank">
+            <img src="./assets/FB7.png" alt="Facebook Video 7" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/480117607846012" target="_blank">
+            <img src="./assets/FB8.JPG" alt="Facebook Video 8" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/1419562042084533" target="_blank">
+            <img src="./assets/FB9.JPG" alt="Facebook Video 9" class="video-thumbnail">
+            
+        </a>
+        <a href="https://www.facebook.com/vizionirinorishales/videos/1039641300870114" target="_blank">
+            <img src="./assets/FB10.JPG" alt="Facebook Video 10" class="video-thumbnail">
+            
+        </a>
+    </div>   
+
+    
+
+    <div class="container">
+        <div class="text-div">
+            <p>
+                -Projekti "Breath Freely Shala" ka pasur një ndikim të thellë në komunitetin e Shalës dhe për rreth, duke transformuar një hapësirë të papërdorur pranë Zyrës së të Rinjve në një mjedis të gjelbër dhe të këndshëm për të rinjtë dhe banorët e zonës. Përmes angazhimit të rinisë dhe vullnetarëve, hapësira u pastrua, u mbollën pemë dhe u vendosën elemente rekreative që i japin komunitetit një vend të sigurt për të kaluar kohën e lirë, për t'u socializuar dhe për të frymëzuar ndjenjën e përkatësisë dhe mirëqenies. Ky projekt ka përmirësuar cilësinë e jetesës në zonë dhe ka inkurajuar kujdesin për mjedisin.
+            </p>
+        </div>
+    
+        <div class="text-div1">
+            <p>
+                - Projekti "Shala e Pastër" ka qenë një hap i rëndësishëm drejt përmirësimit të higjienës dhe mirëqenies së komunitetit në Shalë. Me vendosjen e shportave për mbeturina përgjatë shkollës dhe rrugës kryesore, projekti synoi të reduktojë ndotjen dhe të ndërgjegjësojë banorët për rëndësinë e mbajtjes së pastër të hapësirave publike. Ky iniciativë, e udhëhequr nga të rinjtë dhe e mbështetur nga komuniteti, ka krijuar një mjedis më të pastër dhe më të sigurt për të gjithë, duke shërbyer si një shembull i aktivizmit rinor për mbrojtjen e mjedisit dhe përmirësimin e kushteve të jetesës.
+            </p>
+        </div>
+    
+        <div class="text-div2">
+            <p>
+                - Projekti "Youth in Action" kishte për qëllim krijimin e një hapësire funksionale dhe të mirë organizuar për të rinjtë, përmes rregullimit të Zyrës së të Rinjve. Kjo iniciativë synoi të ofrojë një mjedis të sigurt dhe të përshtatshëm ku të rinjtë mund të zhvillojnë aktivitete, të marrin pjesë në trajnime dhe të angazhohen në projekte që përmirësojnë komunitetin e tyre. Duke krijuar një hapësirë dedikuar të rinjve, projekti forcoi ndjenjën e përkatësisë dhe fuqizoi të rinjtë për të qenë më aktivë dhe të përfshirë në proceset e vendimmarrjes.
+            </p>
+        </div>
+    </div>
+    
+   
+    <footer class="footer">
+        <div class="content">
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1533354269045!2d20.9162598!3d42.5077966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135379e46721bc65%3A0x37b1b89a7a9fc6a2!2sVizioni%20Rinor%20i%20Shal%C3%ABs!5e0!3m2!1sen!2s!4v1710937200000!5m2!1sen!2s" 
+                    width="384" 
+                    height="384" >
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <div class="info" >
+                <p><strong>Numri i telefonit:</strong> <br> <a href="tel:+38345894013">+383 45 89 40 13</a></p>
+                <p><strong>Adresa Fizike:</strong><br> Komuna-Lipjan, Fshati-Shalë, 
+                <br>  Rruga: Brigada 121, Objekti 'Zyra e 
+                <br> Gjendjes Civile'</p>
+                <p><strong>Email:</strong><br> <a href="mailto:vizionirinorishales@gmail.com">vizionirinorishales@gmail.com</a></p>
+            
+        <div class="footer-icons">
+                <a href="https://www.tiktok.com/@vizionirinor"><img src="./assets/tik1.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com/vizionirinorishales/"><img src="./assets/inst2.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/vizionirinorishales"><img src="./assets/fac3.png" alt="TikTok"></a>
+        </div>
+            </div>
+        </div>
+        <p class="description">“Vizion Rinor i Shalës (VRSH) është një organizatë rinore, joqeveritare
+          <br> dhe jofitimprurëse e cila ka për qëllim fuqizimin e të rinjëve në vendimmarrje”.</p>
+    </footer>
+</div>
+</div>
+
+</body>
+</html>

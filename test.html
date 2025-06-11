@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rrethet e perqindjes</title>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: -10px;
+    }
+    .col {
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+      padding: 10px;
+      text-align: center;
+    }
+    .circle-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+    }
+    .circle-svg {
+      transform: rotate(-90deg);
+    }
+    .circle-bg {
+      fill: none;
+      stroke: yellow; 
+      stroke-width: 20;
+    }
+    .circle-progress {
+      fill: none;
+      stroke: blue; 
+      stroke-width: 20;
+      stroke-linecap: butt; 
+      transition: stroke-dashoffset 1s ease;
+    }
+    .circle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Poppins', sans-serif; 
+      font-weight: 700;
+      color: black;
+      font-size: 24px;
+      white-space: nowrap;
+    }
+    .circle-label {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .mt-3 {
+      margin-top: 1rem;
+    }
+    .my-5 {
+      margin: 3rem 0;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background: #ccc;
+      margin: 3rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Set 1 -->
+    <div class="row">
+      <div class="col">
+        <div class="circle-container" data-percent="20">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">20%</div>
+        </div>
+        <div class="circle-label">X-</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-percent="40">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">40%</div>
+        </div>
+        <div class="circle-label">X-</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-percent="60">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">60%</div>
+        </div>
+        <div class="circle-label">X-</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-percent="80">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">80%</div>
+        </div>
+        <div class="circle-label">X-</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-percent="100">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">100%</div>
+        </div>
+        <div class="circle-label">X-</div>
+      </div>
+    </div>
+    
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p>Graph 1</p>
+      </div>
+    </div>
+    
+    <hr class="my-5">
+    
+    <!-- Seti 2 -->
+    <div class="row">
+      <div class="col">
+        <div class="circle-container" data-year="2021" data-customtext="451 perfitues">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">451 perfitues</div>
+        </div>
+        <div class="circle-label">2021</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-year="2022" data-customtext="683 perfitues">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">683 perfitues</div>
+        </div>
+        <div class="circle-label">2022</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-year="2023" data-customtext="547 perfitues">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">547 perfitues</div>
+        </div>
+        <div class="circle-label">2023</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-year="2024" data-customtext="6249 perfitues">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">6249 perfitues</div>
+        </div>
+        <div class="circle-label">2024</div>
+      </div>
+      <div class="col">
+        <div class="circle-container" data-year="2025" data-customtext="X perfitues">
+          <svg class="circle-svg" width="150" height="150">
+            <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+            <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+          </svg>
+          <div class="circle-text">X perfitues</div>
+        </div>
+        <div class="circle-label">2025</div>
+      </div>
+    </div>
+    
+    <!-- Grafi i dyte -->
+    <div class="row mt-3">
+      <div class="col text-center">
+        <p>Graph 1</p>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    // Progresi i rrethit
+    function updateCircle(circleEl, percentage) {
+      const progressCircle = circleEl.querySelector('.circle-progress');
+      const radius = progressCircle.getAttribute('r');
+      const circumference = 2 * Math.PI * radius;
+      const offset = circumference * (1 - percentage / 100);
+      progressCircle.style.strokeDasharray = circumference;
+      progressCircle.style.strokeDashoffset = offset;
+    }
+    
+    // Seti 1
+    document.querySelectorAll('.circle-container[data-percent]').forEach(circle => {
+      const percent = parseFloat(circle.getAttribute('data-percent'));
+      updateCircle(circle, percent);
+    });
+    
+    // Sa shume e vitit ka kalu
+    function getYearProgress(year) {
+      const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+      if (currentYear > year) {
+        return 100;
+      } else if (currentYear < year) {
+        return 0;
+      } else {
+        const start = new Date(year, 0, 1);
+        const end = new Date(year + 1, 0, 1);
+        const passed = currentDate - start;
+        const total = end - start;
+        return Math.min(100, (passed / total) * 100);
+      }
+    }
+    
+    // Seti 2
+    document.querySelectorAll('.circle-container[data-year]').forEach(circle => {
+      const year = parseInt(circle.getAttribute('data-year'));
+      const progress = getYearProgress(year);
+      updateCircle(circle, progress);
+      const customText = circle.getAttribute('data-customtext');
+      circle.querySelector('.circle-text').textContent = customText;
+    });
+    
+    // madhesia e tekstit
+    function adjustCircleText() {
+      const containers = document.querySelectorAll('.circle-container');
+      containers.forEach(container => {
+        const textEl = container.querySelector('.circle-text');
+        textEl.style.fontSize = '24px';
+        let fontSize = 24;
+        // kalkulo gjeresine
+        const availableWidth = container.clientWidth * 0.6; // rrit madhesine sipas nevojes
+        while (textEl.offsetWidth > availableWidth && fontSize > 10) {
+          fontSize -= 1;
+          textEl.style.fontSize = fontSize + 'px';
+        }
+      });
+    }
+    
+    window.addEventListener('load', adjustCircleText);
+    window.addEventListener('resize', adjustCircleText);
+  </script>
+</body>
+</html>

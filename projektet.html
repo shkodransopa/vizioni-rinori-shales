@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Vizioni Rinori I Shales </title>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ <link rel="stylesheet" href="footer.css">
+ <link rel="stylesheet" href="index.css">
+
+ 
+ <style>
+   
+
+   * {
+    font-family: Calibri, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.box {
+    border: 1px solid #ddd;
+    padding: 0px;
+    max-width: max-content;
+    margin: 30px auto;
+    font-weight: 400; /* Mund të përdorni 100, 200, 300, 400 (normal), 500, 600, 700 */
+    letter-spacing: 0.05em; /* Shtoni hapësirë ndërmjet shkronjave */
+    line-height: 1.5; /* Ndryshoni hapësirën ndërmjet linjave të tekstit */
+}
+
+/* Stili yt ekzistues për desktop */
+.box img {
+    margin-left: 10px;
+    width: 530px;
+    height: auto;
+    display: block;
+}
+
+#additional-text {
+    margin-top: 15px;
+    display: inline-block;  /* Ky rresht i bën që të jetë në të njëjtën vijë me elementet e tjerë */
+}
+
+#project-text {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    display: inline-block;  /* Po ashtu, ky e bën të jetë në të njëjtën vijë */
+}
+
+
+/* Responsivitet për pajisje më të vogla */
+@media (max-width: 991px) {
+    .box img {
+        width: 100%;
+        max-width: 530px;
+        margin: 0 auto;
+    }
+
+    #project-text {
+        font-size: 1.4rem;
+        padding: 0 10px;
+        text-align: center;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 768px) {
+    .box img {
+        max-width: 400px;
+    }
+
+    #project-text {
+        font-size: 1.3rem;
+        padding: 0 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .box img {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    #project-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    #project-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Sekcioni i përgjithshëm */
+section {
+    padding: 2rem 9%;
+}
+
+/* Home Section */
+.home {
+    min-height: 100vh;
+    background: url('123.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home form {
+    margin-top: 7rem;
+    background: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    width: 70rem;
+    padding: 2rem;
+}
+
+.home form h3 {
+    text-align: center;
+    color: var(--dark-gray);
+    font-size: 3rem;
+}
+
+/* Services Section */
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.services .box-container .box {
+    flex: 1 1 30rem;
+    border-radius: 0.5rem;
+    background: var(--white);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.services .box-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.services .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+.services .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+.services .box-container .box img:hover {
+    opacity: 0.8;
+}
+
+.services .box-container .box:hover h3 {
+    color: var(--red);
+}
+
+.services .box-container .box:hover p {
+    color: var(--dark-gray);
+}
+
+/* Featured Section */
+.featured .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.featured .box-container .box {
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: var(--white);
+    flex: 1 1 30rem;
+}
+
+.featured .box-container .box .image-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 25rem;
+}
+
+.featured .box-container .box .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.2s linear;
+}
+
+/* Për ekrane deri 991px (tablets) */
+@media (max-width: 991px) {
+    .box img {
+        width: 100%;
+        max-width: 530px;
+        margin-left: 0;
+    }
+
+    .box {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .featured .box-container .box,
+    .services .box-container .box {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* Për ekrane deri 768px (telefona më të mëdhenj ose tablets horizontal) */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .featured .box-container .box,
+    .services .box-container .box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Për ekrane deri 576px (telefona normal) */
+@media (max-width: 576px) {
+    .featured .box-container .box,
+    .services .box-container .box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .featured .box-container .box .image-container {
+        height: 20rem; /* zvogëlojmë imazhin */
+    }
+}
+
+/* Për ekrane shumë të vogla, deri 400px (telefona shumë të vegjël) */
+@media (max-width: 400px) {
+    .home form h3 {
+        font-size: 2rem;
+    }
+
+    .services .box-container .box h3 {
+        font-size: 2rem;
+    }
+
+    .services .box-container .box p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Për tekstin "Read More" */
+#more-text {
+    font-size: 25px;
+    margin-left: 300px;
+    cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+    #more-text {
+        margin-left: 200px; /* Reduce margin on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #more-text {
+        margin-left: 100px; /* Further reduce margin on tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #more-text {
+        margin-left: 50px; /* Smaller margin on mobile */
+        font-size: 22px; /* Slightly smaller font on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Për zvogëlimin e madhësisë së titullit në pajisje më të vogla */
+@media (max-width: 991px) {
+    #project-text {
+        font-size: 1.3rem; /* Reduktimi i madhësisë së titullit për pajisje më të vogla */
+    }
+}
+
+@media (max-width: 768px) {
+    #project-text {
+        font-size: 1.2rem; /* Reduktimi i mëtejshëm për tabletë ose telefona të mëdhenj */
+    }
+}
+
+@media (max-width: 576px) {
+    #project-text {
+        font-size: 1.1rem; /* Për pajisje më të vogla */
+    }
+}
+
+@media (max-width: 400px) {
+    #project-text {
+        font-size: 1rem; /* Teksti më i vogël për telefona shumë të vegjël */
+    }
+}
+
+
+
+
+
+
+
+    
+    </style>
+ 
+
+</head>
+<body>
+ 
+
+
+
+ 
+    <nav class="navbar">
+        <div class="nav-container">
+          <a href="./index.html"><img src="logo.png" alt="URSH Logo" class="logo" /></a>
+          
+          <label class="hamburger">
+            <input type="checkbox" id="hamburger-toggle" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          
+      
+          <!-- Nav links -->
+          <div class="nav-links" id="nav-links">
+            <a href="./index.html">Ballina</a>
+            <a href="./home.html">Rreth nesh</a>
+            <a href="./projektet.html">Projektet</a>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Lajmet &#8595;</a>
+              <div class="dropdown-content">
+                <a href="./lajmet.html">VRSH në media</a>
+                <a href="./lajmetefundit.html">Lajmet e fundit</a>
+                <a href="./raportedhepublikime.html">Raporte dhe publikime</a>
+              </div>
+            </div>
+            <a href="./galeria.html">Galeria</a>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <script>
+        const toggle = document.getElementById("hamburger-toggle");
+        const navLinks = document.getElementById("nav-links");
+      
+        toggle.addEventListener("change", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+
+
+
+
+
+<section class="home" id="home">
+
+
+
+</section>
+
+
+
+<section class="services" id="services">
+
+
+ <div class="box-container">
+
+ <div class="box">
+ <h3>Youth4CulturalHeritage</h3>
+ <img src="1.png" alt="" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti ‘Youth4CulturalHeritage’ ka për qëllim ngritjen dhe edukimin jo-formal të
+    të rinjëve të Komunës së Lipjanit të moshës 13-15 të shkollave ‘Ibrahim
+    Banushi’ Shalë, ‘Vezir Kolshi’ Baicë, ‘Dy dëshmorët’ Dobrajë e Madhe dhe ‘Kadri
+    Beba’ Ribar i Madh, në lidhje me trashëgiminë kulturore dhe llojet e saj, përfshirë
+    edhe fuqizimin e tyre përmes aktiviteteve si ligjerata, vizita studimore, improvizim të
+    gërmimeve arkeologjike, forumit të diskutimit, si dhe videove promovuese. Rreth 350
+    të rinjë do të jenë përfitues direkt të projektit, ndërsa rreth 500 do të ndikohen
+    në mënyrë indirekte përmes aktiviteteve të projektit. Ky projekt do të realizohet
+    përgjatë periudhës Tetor-Dhjetor 2024.
+ </p>
+
+ </div>
+
+ 
+
+ <div class="box">
+ <h3>Fuqizimi i të rinjëve për pjesëmarrje në vendimmarrje lokale dhe
+    mobilizim të komunitetit në komunën e Lipjanit</h3>
+ <img src="ERB04829.JPG" alt="" height="350" width="614">
+ <p id="project-text"> 
+ Projekti ‘Fuqizimi i të rinjëve për pjesëmarrje në
+ vendimmarrje lokale dhe mobilizim të komunitetit në komunën e 
+ Lipjanit’ synon aktivizimin e të rinjëve të 
+ Lipjanit për pjesëmarrje në proceset me interes publik
+ në nivel lokal përmes sesioneve trajnuese intensive për 
+ 40 të rinjë (nga mosha 16 deri 24 vjec). 
+ Që në të ardhmen kanë potencial për të 
+ avokuar për komunitetin dhe interesat publike 
+ të komunës së Lipjanit. 
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Ky projekt do të realizohet 
+ përgjatë periudhës Tetor 2024-Maj 2025.
+ Implementuar nga Vizioni Rinor i Shalës 
+ Mbështetur nga Kosovar Civil Society Foundation</p>
+ </details>
+
+ 
+ </div>
+
+
+
+
+ <!-- New Box 1 -->
+ <div class="box">
+ <h3>Forcimi i demokracisë lokale përmes gjithëpërfshirjes gjinore: Gratë dhe
+    këshillat lokal në komunën e Lipjanit</h3>
+ <img src="IMG_6785.jpg" alt="Edukimi në mjedisin e qëndrueshëm" height="350px" width="614px">
+ <p id="project-text">
+    Projekti ‘Forcimi i demokracisë lokale përmes gjithëpërfshirjes gjinore: Gratë dhe
+    këshillat lokal në komunën e Lipjanit’ ka për qëllim adresimin e problemit të
+    nënpërfaqësimit të grave në këshillat lokal, përkatësisht faktorët kulturor dhe
+    organizativ, të cilët vështirësojnë zgjedhjen e grave në udhëheqësinë e këshillave lokal
+    dhe pjesëmarrjen e tyre në aktivitetet e këtyre strukturave, duke organizuar aktivitete që
+    kanë potencial në ndryshimin e këtij mentaliteti dhe në ofrimin e zgjidhjeve praktike për
+    rritjen e përfaqësuesshmërisë gjinore në këto struktura të rëndësishme për demokracinë
+    lokale. Ky projekt do të realizohet përgjatë periudhës Tetor 2024-Mars 2025. </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text"></p>
+ </details>
+</div>
+
+
+<!-- New Box 2 -->
+<div class="box">
+ <h3>Projekte të përfunduara:</h3>
+ <h3>Bibloteka Arti dhe të Rinjët </h3>
+ <img src="4.png" alt="Pjesëmarrja e të rinjëve" height="350px" width="614px">
+ <p id="project-text">Projekti &quot;Biblioteka, Arti dhe Të Rinjtë&quot; i dha jetë krijimtarisë së të rinjve, duke i
+    bashkuar ata nga sektorë të ndryshëm për të eksploruar artin dhe kulturën. Përmes
+    trajnimeve dhe aktiviteteve, pjesëmarrësit zhvilluan aftësi të reja, zgjeruan horizontet
+    dhe ndërtuan lidhje frymëzuese me profesionistë, duke i fuqizuar për sfidat e ardhshme.
+    Ky projekt është realizuar përgjatë vitit 2021-2022.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar  nga Vizioni Rinor i Shalës
+    Mbështetur nga Zyra e Presidencës
+
+</p>
+ </details>
+</div>
+
+<!-- New Box 3 -->
+<div class="box">
+ <h3>Fuqizimi i të rinjëve përmes pjesëmarrjes në qeverisjen lokale</h3>
+ <img src="5.png" alt="Shëndeti mendor dhe mirëqenia" height="350px" width="614px">
+ <p id="project-text">Projekti ‘Fuqizimi i të rinjëve përmes pjesëmarrjes në qeverisjen lokale’ ka pasur për
+    qëllim fuqizimin e angazhimit qytetar të grupeve të margjinalizuara, përkatësisht të
+    rinjëve, për t’u përfaqësuar edhe ato në proceset e zhvillimit, përkatësisht të qeverisjes
+    lokale, përmes ngritjes së “Grupit Këshillimor të të rinjve’, rritjen e aftësive të
+    “Këshillave të Nxënësve” në shkollat e mesme të ulëta dhe të larta për të qenë
+    pjesëmarrës në vendimmarrjen lokale. Ky projekt është realizuar në vitin 2022. </p>
+ 
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shalës
+
+    Mbështetur nga Kosovar Civil Society Foundations
+ </p>
+ </details>
+ </div>
+
+<!-- New Box 4 -->
+<div class="box">
+ <h3>Mbroje Trashëgiminë e Shalës </h3>
+ <img src="6.png" alt="Kreativiteti dhe inovacioni" height="350px" width="614px">
+ <p id="project-text">Projekti &quot;Mbroje Trashëgiminë e Shalës&quot; (2020) synoi ruajtjen dhe promovimin e
+    trashëgimisë kulturore dhe natyrore të Shalës. Duke përfshirë komunitetin dhe
+    ekspertët, projekti mbrojti traditat, monumentet dhe peizazhet e zonës së Shalës dhe
+    përreth, duke edukuar pjesëmarrësit mbi rëndësinë e trashëgimisë dhe ruajtjen e saj për
+    brezat e ardhshëm. Ky angazhim ka forcuar lidhjet mes komunitetit dhe kulturës së tyre
+    të pasur. Ky projekt është realizuar në vitin 2020.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës
+
+
+    Mbështetur nga IPKO Foundation</p>
+ </details>
+ </div>
+
+<!-- New Box 5 -->
+<div class="box">
+ <h3>Anti Covid-19 Advocates</h3>
+ <img src="7.png" alt="Aktivitete kulturore dhe artistike" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti &quot;Anti Covid-19 Advocates&quot; synoi të ndihmojë në luftën kundër pandemisë
+    me Covid-19 përmes fushatave ndërgjegjësuese dhe shpërndarjes së pajisjeve mbrojtëse.
+    Pjesëmarrësit mësuan rreth masave parandaluese dhe kontribuan në mbrojtjen e
+    shëndetit publik, duke mbështetur grupet më të prekura dhe forcimin e sistemit
+    shëndetësor. Ky projekt është realizuar në vitin 2020.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës
+
+
+
+    Mbështetur nga Peer Educators Network</p>
+ </details>
+ </div>
+
+
+
+
+
+
+
+ <!-- Box 1 -->
+ <div class="box">
+ <h3>Youth in Action</h3>
+ <img src="8.png" alt="Youth4CulturalHeritage" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti &quot;Youth in Action&quot; kishte për qëllim krijimin e një hapësire të dedikuar për të
+    rinjtë, duke rregulluar Zyrën e të Rinjve. Ky projekt siguroi një mjedis ku të rinjtë mund
+    të zhvillojnë aktivitete, të angazhohen në projekte dhe të marrin pjesë në trajnime që i
+    ndihmojnë ata në zhvillimin personal dhe profesional. Hapësira e renovuar tashmë
+    është një qendër e rëndësishme për aktivitetet rinore dhe një vend për mbledhje e
+    bashkëpunim në komunitet. Ky projekt është realizuar në vitin 2021.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës
+
+    Mbështetur nga IPKO Foundation</p>
+ </details>
+ </div>
+
+ <!-- Box 2 -->
+ <div class="box">
+ <h3>Play Based Learning </h3>
+ <img src="9.png" alt="Fuqizimi i të rinjëve" height="350" width="614">
+ <p id="project-text">Projekti &quot;Play Based Learning&quot; u implementua me sukses për të revolucionarizuar
+    mënyrën e të mësuarit të fëmijëve përmes integrimit të lojës si metodë kryesore. Ky
+    projekt ka ndihmuar në përmirësimin e aftësive kognitive, sociale dhe emocionale të
+    fëmijëve, duke ofruar një ambient më të natyrshëm dhe të këndshëm për zhvillimin e
+    tyre të gjithanshëm. Ky projekt është realizuar në vitin 2019. </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Peer Educators Network</p>
+ </details>
+ </div>
+
+ <!-- Box 3 -->
+ <div class="box">
+ <h3>Mërgata Fest and Sports 2024 </h3>
+ <img src="10.png" alt="Edukimi në mjedisin e qëndrueshëm" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti "Mërgata Fest and Sports 2024" është realizuar me sukses dhe ka sjellë një
+    festë të paharrueshme që bashkon kulturën dhe sportin në një ngjarje të veçantë. Ky
+    projekt ka promovuar kulturën dhe traditën, si dhe organizimin e aktiviteteve sportive
+    që angazhojnë komunitetin. Me një program të pasur që përfshiu performanca artistike,
+    ekspozita kulturore dhe gara sportive, projekti ka ndihmuar në forcimin e lidhjeve
+    ndërmjet individëve dhe ka krijuar mundësi për bashkëpunim dhe argëtim. "Mërgata
+    Fest and Sports 2024" ka ofruar një mundësi të shkëlqyer për të bashkuar diasporën me
+    
+    vendlindjen dhe për të festuar diversitetin kulturor dhe sportiv në një ambient
+    integrues. Ky projekt është realizuar në muajt Korrik-Gusht 2024.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shalës
+    Mbështetur nga Komuna e Lipjanit
+</p>
+ </details>
+ </div>
+
+ <!-- Box 4 -->
+ <div class="box">
+ <h3>Kujtesa Kolektive Gjatë Luftës së 
+ 98-99 në Grykën e Shalës </h3>
+ <img src="11.png" alt="Pjesëmarrja e të rinjëve" height="350px" width="614px">
+ <p id="project-text">Projekti "Kujtesa Kolektive Gjatë Luftës së 98-99 në Grykën e Shalës" është
+    implementuar për të ruajtur dhe reflektuar kujtesën kolektive mbi atë se çfarë ka
+    ndodhur realisht gjatë viteve 98-99 në Grykën e Shalës. Pjesë e projektit ishin edhe
+    tendat e improvizuara që pasqyronin kushtet dhe përjetimet e asaj kohe, se si mijëra
+    banorë të zonër kanë jetuar në atë kohë. Përmes ekspozitave, dokumentarëve, tendave
+    dhe aktiviteteve edukative, projekti ka ndihmuar në ndriçimin e ngjarjeve të
+    rëndësishme, duke forcuar lidhjet ndërmjet të kaluarës dhe të tashmes, dhe duke
+    kontribuar në ruajtjen e kujtesës kolektive të komunitetit. Ky projekt është realizuar në
+    muajin Qershor 2024.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Drejtoria për Kulturë, Rini dhe Sport e Komunës së Lipjanit</p>
+ </details>
+
+ </div>
+
+ <!-- Box 5 -->
+ <div class="box">
+ <h3>Unë sfidoj pabarazinë dhe stereotipet gjinore </h3>
+ <img src="12.png" alt="Shëndeti mendor dhe mirëqenia" height="350px" width="614px">
+ <p id="project-text">
+    Projekti "Unë Sfidoj Pabarazinë dhe Stereotipet Gjinore"ka pasur për qëllim
+    ngritjen e vetëdijes mbi të rinjëve rreth pabarazitsë dhe stereotipeve gjinore në
+    komunitet. Me trajnime, workshope dhe fushata ndërgjegjësimi, projekti ka ndihmuar
+    në krijimin e një mjedisi më të barabartë dhe përfshirës, duke fuqizuar individët të
+    ndryshojnë perceptimet dhe praktikat e ndikuara nga stereotipet gjinore. Ky projekt
+    është realizuar në vitin 2021.</p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Kosovo 2.0</p>
+ </details>
+ </div>
+
+ <!-- Box 6 -->
+ <div class="box">
+ <h3>Rini Aktive </h3>
+ <img src="13.png" alt="Kreativiteti dhe inovacioni" height="350px" width="614px">
+ <p id="project-text"> Projekti &quot;Rini Aktive&quot; është implementuar me sukses për të fuqizuar të rinjtë dhe
+    inkurajuar angazhimin e tyre në aktivitete që kontribuojnë në përmirësimin e
+    komuniteteve. Pjesëmarrësit kanë pasur mundësinë të planifikojnë dhe të angazhohen
+    në diskutime mbi çështje sociale dhe lokale. Ky projekt ka ofruar një mundësi të
+    shkëlqyer për të rinjtë që të zhvillojnë aftësi dhe të luajnë një rol aktiv në ndërtimin e një
+    komuniteti më të bashkuar dhe më të angazhuar. Ky projekt është realizuar në vitin
+    2021.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës
+    Mbështetur nga Drejtoria për Kulturë, Rini dhe Sport e Komunës së Lipjanit</p>
+
+ </details>
+ </div>
+
+ <!-- Box 7 -->
+ <div class="box">
+ <h3>Rinia në Vullnetarizëm</h3>
+ <img src="14.png" alt="Aktivitete kulturore dhe artistike" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti &quot;Rinia në Vullnetarizëm&quot; ka pasur për qëllim të inkurajojë dhe fuqizojë të
+rinjtë në angazhimin e tyre në aktivitete vullnetarizmi. Përmes aktiviteteve të ndryshme,
+projekti ka ndihmuar në zhvillimin e aftësive të rëndësishme dhe ka promovuar një
+kulturë angazhimi dhe solidariteti tek të rinjët e Komunës së Lipjanit dhe Shtimes. Të
+rinjtë pjesëmarrës kanë kontribuar në ndërtimin e një shoqërie më të bashkuar dhe më
+të angazhuar, duke bërë një ndryshim pozitiv për të gjithë. Ky projekt është realizuar në
+vitin 2021.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Ministria e Kulturës, Rinisë dhe Sportit</p>
+ </details>
+ </div>
+
+ <!-- Box 8 -->
+ <div class="box">
+ <h3>Kujdesu për veten, ruaje shnetën </h3>
+ <img src="15.png" alt="Edukimi për teknologji" height="350px" width="614px">
+ <p id="project-text">Projekti &quot;Kujdesu për Veten, Ruaje Shëndetin&quot; ka promovuar rëndësinë e
+    mbajtjes së maskave mbrojtëse në kohën e pandemisë me Covid-19 tek nxënësit e niveli
+    1-5 të shkollave SHFMU ‘Ibrahim Banushi’ në Shalë dhe SHFMU ‘Haradin Bajrami’ në
+    Magurë. Njëkohësisht nxënësit janë informuar mbi aspekte tjera të higjienës personale.
+    Ky projekt është realizuar në vitin 2020. </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Drejtoria për Kulturë, Rini dhe Sport e Komunës së Lipjanit </p>
+ </details>
+ </div>
+
+ <!-- Box 9 -->
+ <div class="box">
+ <h3>Rini Europiane</h3>
+ <img src="16.png" alt="Zhvillimi i ndërmarrjeve rinore" height="350px" width="614px">
+ <p id="project-text"> 
+    Projekti &quot;Rini Europiane&quot; ka promovuar bashkëpunimin dhe angazhimin e të rinjve
+    në nivel evropian përmes aktiviteteve ndërkulturore. Ai ka ofruar mundësi për programe
+    shkëmbimi dhe projekte të përbashkëta, ndihmuar në ndërtimin e lidhjeve të forta mes
+    të rinjve nga vende të ndryshme evropiane. Pjesëmarrësit kanë zhvilluar aftësi të
+    vlefshme dhe kanë krijuar lidhje të qëndrueshme, duke kontribuar në ndërtimin e një
+    shoqërie më të bashkuar dhe të integruar. Projekti është realizuar në vitin 2023-2024.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Ministria e Kulturës, Rinisë dhe Sportit</p>
+ </details>
+ </div>
+
+ <!-- Box 10 -->
+ <div class="box">
+ <h3>Breathe Freely Shala</h3>
+ <img src="17.png" alt="Fuqizimi i të rinjëve" height="350px" width="614px">
+ <p id="project-text"> Projekti ‘Breathe Freely Shala’ ka pasur për qëllim përmirësimin e cilësisë së ajrit dhe
+    mjedisit në fshatin Shalë përmes rregullimi të hapësirës së jashtme të Zyrës së Gjendjes
+    Civile. Përveç që është rregulluar hapësira, duke u shëndrruar në një ambient shumë më
+    gjelbërues, janë realizuar edhe një seri aktivitetesh që kanë pasur ndikim direkt në
+    
+    përmirësimin e situatës në terren dhe ngritjen e vetëdijes tek banorët e fshatit Shalë për
+    rrezikshmërinë e përdorimit të thëngjillit për ngrohje. Kështu me anë të ligjeratave,
+    kampanjës online dhe avokimit me hisedarë vendimmarrës është bërë progres në këtë
+    drejtim. Ky projekt është realizuar në vitin 2024.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">
+    Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Peer Educators Network</p>
+ </details>
+ </div>
+
+ <!-- Box 11 -->
+ <div class="box">
+ <h3>Atele e Artit</h3>
+ <img src="18.png" alt="Mbrojtja e të drejtave të njeriut" height="350px" width="614px">
+ <p id="project-text">
+    Projekti ‘Atele e Artit’ i realizuar në SHFMU ‘Haradin Bajrami’ në Magurë, ka pasur për
+    qëllim krijimin e Atelesë së Artit për nxënësit e kësaj shkolle, në mënyrë që të njëjtit të
+    kenë hapësirë të veçantë për shprehjen e talentit të tyre në art, përkatësisht vizatim e
+    pikturim. Përmes pajisjeve të ndryshme si, kavaleta, mjete pune, nxënësitë tashmë e
+    kanë të lehtë zhvillimin e orës mësimore ‘Arti Figurativ’, njëkohësisht mësimdhënësit
+    përkatës të lëndës. Ky projekt është realizuar në vitin 2022.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga IPKO Foundation</p>
+ </details>
+ </div>
+
+
+
+
+
+
+
+ <div class="box">
+ <h3> Muaji rozë</h3>
+ <img src="19.png" alt="Rritja e kapaciteteve" height="350" width="614">
+ <p id="project-text">Ky projekt ka pasur për qëllim ngritjen e vetëdijes tek gratë, për diagnostifikim të
+    hershëm të Kancerit të Gjirit, informimin mbi simptomat, cilat janë fazat që duhet për
+    tu kuruar, si mund të bëjnë vetëkontroll, sa herë duhet të kontrollohen, nga cila moshë
+    mund të bëjnë mamografi etj. Në kuadër të këtij projekti është shënuar Dita
+    Ndërkombëtare e Kancerit të Gjitit në Komunën e Lipjanit përmes ecjes së përbashkët,
+    ligjeratës për parandalimin dhe shërimin me kohë të Kancerit të Gjirit, si dhe programit
+    artistik me nxënës. Ky projekt është realizuar në muajin Tetor 2022.
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shalës 
+    Mbështetur nga Drejtoria për Kulturë, Rini dhe Sport e Komunës së Lipjanit </p>
+ </details>
+ </div>
+
+ <!-- Box 4 -->
+ <div class="box">
+ <h3>Darka e Lamës</h3>
+ <img src="20.png" alt="Rrjetëzimi i të rinjve" height="350" width="614">
+ <p id="project-text">Projekti ‘Darka e Lamës’ i realizuar për nderë të Ditës së Flamurit, me synim që përmes
+    këtij projekti të rinjët do të njoftohen me festën tradicionale të shqiptarëve, festë kjo e
+    cila është pak e njohur tek të rinjët e Komunës së Lipjanit. Duhet theksuar se një
+    aktivitet siç është Darka e Lamës është realizuar për herë të parë në Komunën tonë. Në
+    këtë aktivitet janë përfshirë hapësirë me mjete të vjetra dhe ushqime të ndryshme
+    tradicionale si flija , pite të llojeve të ndryshme , bakllava etj. Ky projekt është realizuar
+    në muajin Nëntor 2023.
+ 
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shales 
+
+    Mbështetur nga Drejtoria për Kulturë, Rini dhe Sport e Komunës së Lipjanit </p>
+ </details>
+ </div>
+
+ <!-- Box 5 -->
+ <div class="box">
+ <h3>-Shala e Pastër-</h3>
+ <img src="21.png" alt="Pjesëmarrja e rinisë" height="350" width="614">
+ <p id="project-text">Projekti “Shala e Pastër” ka pasur për synim të përmirësojë cilësinë e mjedisit tonë duke
+    e bërë fshatin Shalë më të pastër, përmes vendosjes së 10 shportave përgjatë rrugëve
+    kryesore të fshatit Shalë, si dhe ndërgjegjësimit të grupeve të ndryshme të komunitetit
+    përmes ligjeratave vetëdijësuese, si dhe ndërmarrjes së aksioneve të pastrimit. Ky
+    projekt është realizuar në muajin Shtator 2024. 
+ </p>
+ <details>
+ <summary id="more-text" >Me shumë...</summary>
+ <p id="additional-text">Implementuar nga Vizioni Rinor i Shales 
+    Mbështetur nga IPKO Foundation</p>
+ </details>
+ </div>
+</div>
+</section>
+
+<footer class="footer">
+    <div class="content">
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1533354269045!2d20.9162598!3d42.5077966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135379e46721bc65%3A0x37b1b89a7a9fc6a2!2sVizioni%20Rinor%20i%20Shal%C3%ABs!5e0!3m2!1sen!2s!4v1710937200000!5m2!1sen!2s" 
+                width="384" 
+                height="384" >
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        
+        <div class="info">
+            <p><strong>Numri i telefonit:</strong> <br> <a href="tel:+38345894013">+383 45 89 40 13</a></p>
+            <p><strong>Adresa Fizike:</strong><br> Komuna-Lipjan, Fshati-Shalë, 
+            <br>  Rruga: Brigada 121, Objekti 'Zyra e 
+            <br> Gjendjes Civile'</p>
+            <p><strong>Email:</strong><br> <a href="mailto:vizionirinorishales@gmail.com">vizionirinorishales@gmail.com</a></p>
+        
+    <div class="footer-icons">
+            <a href="https://www.tiktok.com/@vizionirinor"><img src="./assets/tik1.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/vizionirinorishales/"><img src="./assets/inst2.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/vizionirinorishales"><img src="./assets/fac3.png" alt="TikTok"></a>
+    </div>
+        </div>
+    </div>
+    <p class="description">“Vizion Rinor i Shalës (VRSH) është një organizatë rinore, joqeveritare <br>
+         dhe jofitimprurëse e cila ka për qëllim fuqizimin e të rinjëve në vendimmarrje”.</p>
+</footer>
+
+
+
+
+
+
+</body>
+</html>

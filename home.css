@@ -1,0 +1,1202 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, sans-serif;
+    overflow-x: visible; /* Prevents horizontal scrolling */
+    background-color: #e0e0e0;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ---------- NAVBAR (MBËRTHYER NË FOTO) ---------- */
+/* ---------- NAVBAR (STIL I RIPËRSHITUR) ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 8%; /* Më i ngushtë vertikalisht */
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-left: -1.9rem; 
+    height: 150px; /* Logo më e madhe */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Animacion hover për logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem; 
+    margin-right: -1.5%;/* Hapësirë më e vogël midis linkeve */
+}
+
+.nav-links a {
+    color: #433939 ;
+    text-decoration: none;
+    font-weight: 600; /* Tekst më i trashë */
+    font-size: 1rem; /* Madhësi pak më e vogël */
+    padding: 0.4rem 0.8rem; /* Padding më kompakt */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3e2f2f ;
+   
+    transform: translateY(-2px); /* Efekt hover më dinamik */
+}
+
+
+
+.content1 {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 40px;
+    background-color: #f4f4f4;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+
+.box {
+    background-color: #ffffff1a;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    border: 0;
+    height: 450px;
+   box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1);
+}
+.popuptxt{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#box5 {
+
+margin-left: 415px;   
+max-width: 588px;
+width: 100%;
+}
+#box4 {
+
+max-width: 588px;
+width: 100%;
+margin-right: 170px;
+}
+#box3 {
+
+max-width: 588px;
+width: 100%;
+margin-left: 170px;
+}
+#box2 {
+
+max-width: 588px;
+width: 100%;
+margin-right: 170px;
+
+
+}
+#box1 {
+
+max-width: 588px;
+width: 100%;
+margin-left: 170px;
+ 
+}
+
+
+.box h2 {
+    color: #333;
+    margin-top: 0;
+    font-size: 1.5em;
+    height: 32px;
+    width: 223px;
+}
+
+.box p {
+    font-size: 1.6em;
+    line-height: 1.5;
+
+}
+
+.box a {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+}
+
+.box a:hover {
+    color: #0056b3;
+}
+.imghistoia{
+    width: 100px;
+}
+.historia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+.ekipi h1{
+    margin-left: 700px;
+}
+body {  
+
+    background-color: #f4f4f4;  
+    color: #333;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+.container {  
+    width: 90%;  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 20px;  
+
+}  
+
+.butonat {  
+    display: flex;  
+    justify-content: center;  
+    gap: 10px;  
+    margin-bottom: 10px;
+
+}  
+
+.butonat label {  
+    padding: 10px 20px;  
+    background-color: #1d9bd4;
+    color: #fff;  
+    border-radius: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease;  
+}  
+
+.butonat label:hover {  
+    background-color: #34495e;  
+}  
+
+.slides {  
+    position: relative;  
+    overflow: hidden;  
+}  
+
+.slide {  
+    display: none;  
+    padding: 20px;  
+    text-align: center;  
+}  
+
+.slide h2 {  
+    color: #2c3e50;  
+    margin-bottom: 20px;
+}  
+
+.team-members {  
+    display: flex;  
+    flex-wrap: wrap;  
+    gap: 50px;  
+    justify-content: center;  
+}  
+
+.member {  
+    background-color: #ecf0f1;  
+    border-radius: 10px;  
+    padding: 20px;  
+    width: 250px;  
+    height: 350px;
+    text-align: center;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    margin-bottom: 150px;
+}  
+
+.member img {  
+    width: 100px; /* Adjust width */  
+    height: 100px; /* Adjust height */  
+    max-width: 100%; /* Prevent overflow */  
+    border-radius: 50%;  
+    margin-bottom: 15px;  
+    object-fit: cover; /* Maintain aspect ratio */  
+}  
+
+.member h3 {  
+    margin: 10px 0;  
+    color: #2c3e50;  
+}  
+
+.member p {  
+    margin: 5px 0;  
+    font-size: 14px;  
+    color: #7f8c8d;  
+}  
+
+/* Control slides with radio buttons */  
+#slide1:checked ~ .slide:nth-of-type(1),  
+#slide2:checked ~ .slide:nth-of-type(2),  
+#slide3:checked ~ .slide:nth-of-type(3),  
+#slide4:checked ~ .slide:nth-of-type(4),
+#slide5:checked ~ .slide:nth-of-type(5)
+ {  
+    display: block;  
+}  
+
+/* Hide radio buttons */  
+input[type="radio"] {  
+    display: none;  
+}  
+    
+  
+
+
+
+
+
+.slide {
+    flex-shrink: 0;
+    width: auto;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.slide img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.blankw{
+    width: 100%;
+    height: 100px;
+}
+
+
+@keyframes slide  {
+    from{
+        transform: translateX(0);
+    }
+    to{
+     transform: translateX(-100%);
+    }
+    
+}
+
+.logos{
+    overflow: hidden;
+    background-color: #e0e0e0;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 200px;
+    margin-bottom: 200px;
+    align-items: center;
+}
+
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos-slide {
+    display: inline-block;
+    animation: 60s slide infinite linear;
+}
+
+.logos-slide img {
+    height: 100px;
+    margin: 50px 30px;
+}
+
+
+
+/* Stilizimi i dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #433939;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3e2f2f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: #433939;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ndrysho në inline-block për rreshtim të saktë */
+}
+
+.dropbtn:hover {
+    color: #3e2f2f;
+    transform: translateY(-2px);
+}
+
+.info1{
+    justify-content: center;
+    margin-left: 290px;
+    margin-bottom: 80px;
+    margin-top: 80px;
+}
+
+.info2{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+/* Stilizimi i Popup-it */
+.popup-overlay {
+    display: none; /* Popup-i është i fshehur fillimisht */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Hija e mbrapshtme */
+    z-index: 1000; /* Siguron që popup-i të jetë në pjesën e sipërme */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Stilizimi i përmbajtjes së popup-it */
+.popup-content {
+    background-color: #1D9BD4;
+    padding: 20px;
+    max-width: 900px;
+    height: 700px;
+    border-radius: 8px;
+    position: relative;
+    font-size: 22px;
+}
+
+/* Stilizimi i butonit të mbylljes */
+.close-btn {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    font-size: 60px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dn{
+    margin-bottom: 60px;
+    margin-top: 50px;
+    text-align: center;
+    color: #1D9BD4;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger button – shfaqet vetëm në mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #433939;
+}
+
+/* Responsive për pajisje të vogla (telefon, tablet) */
+@media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: #81d4fa; /* Ngjyra si në foto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links a {
+      color: #000;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      display: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown .dropbtn:focus + .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #433939; /* Ngjyra sipas dizajnit tënd */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+  
+  /* Sigurohu që kjo pjesë është aktive vetëm në mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===================== RESPONSIVE DESIGN ===================== */
+
+@media (max-width: 1200px) {
+    .ekipi h1 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .info1 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .content1 {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    #box1, #box2, #box3, #box4, #box5 {
+        margin: 20px auto;
+    }
+
+    .historia {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .popup-content {
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+    }
+
+    @media (max-width: 480px) {
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 32px;
+            z-index: 9999;
+            background: none;
+            border: none;
+            color: black;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+@media (max-width: 768px) {
+ 
+
+    .butonat {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .member {
+        width: 90%;
+        height: auto;
+    }
+
+    .imghistoia {
+        width: 80px;
+    }
+
+    .team-members {
+        gap: 30px;
+    }
+
+    .popup-content {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .dn {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 15px;
+        height: auto;
+    }
+
+    .box h2 {
+        font-size: 1.2em;
+        width: 100%;
+    }
+
+    .box p {
+        font-size: 1.1em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .logos {
+        height: auto;
+    }
+
+    .logos-slide img {
+        height: 60px;
+        margin: 20px;
+    }
+
+    .dn {
+        font-size: 28px;
+    }
+
+    .popup-content {
+        height: auto;
+        max-width: 95%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .popup-content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Kjo e qendron popup-in në qendër */
+        max-height: 80vh; /* Kufizohet lartësia për të mos dalë jashtë ekranit */
+        overflow-y: auto; /* Nëse përmbajtja është e gjatë, shfaq shirit shfletues */
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.bg-image {
+    background-image: url('./assets/bg.png'); /* Ndrysho URL-në me imazhin tënd */
+    background-size: cover; /* Mbush të gjithë div-in me imazhin */
+    background-position: center; /* Qendërzo imazhin */
+    background-repeat: no-repeat; /* Mos e përsërit imazhin */
+    max-width: 100%; /* Përshtat gjerësinë */
+    height: 700px; /* Lartësia e div-it */
+    display: flex; /* Për rreshtimin e përmbajtjes */
+    flex-direction: column; /* Përmbajtja njëra mbi tjetrën */
+    justify-content: center; /* Qendërzo vertikalisht përmbajtjen */
+    align-items: center; /* Qendërzo horizontalisht përmbajtjen */
+    color: white; /* Ngjyra e tekstit */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hije për tekstin */
+    padding: 20px; /* Hapësirë brenda div-it */
+}
+
+/* Media Query për ekrane më të vogla (Mobile) */
+@media screen and (max-width: 768px) {
+   
+
+    .content1 {
+        flex-direction: column; /* Rreshtimi i elementëve në mënyrë vertikale */
+        padding: 20px; /* Zvogëlon hapësirën në ekrane më të vogla */
+    }
+
+    .box {
+        height: auto; /* Lartësia do të përshtatet me përmbajtjen */
+        padding: 15px; /* Zvogëlon hapësirën e brendshme */
+        width: 100%; /* Përshtat gjerësinë për ekrane të vogla */
+        max-width: 100%; /* Siguron që kutia të mbushë të gjithë hapësirën */
+    }
+
+    .popuptxt {
+        font-size: large; /* Zvogëlon madhësinë e fontit për mobilët */
+    }
+}
+
+/* Media Query për tableta dhe ekrane të mëdha */
+@media screen and (min-width: 769px) {
+    
+
+    .content1 {
+        flex-direction: row; /* Përshtat rreshtimin horizontal */
+        padding: 40px; /* Hapësirë më të madhe për ekranet e mëdha */
+    }
+
+    .box {
+        height: 450px; /* Lartësia e kutisë për ekrane të mëdha */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger button – shfaqet vetëm në mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #433939;
+}
+
+/* Responsive për pajisje të vogla (telefon, tablet) */
+@media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: #81d4fa; /* Ngjyra si në foto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links a {
+      color: #000;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      display: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown .dropbtn:focus + .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #433939; /* Ngjyra sipas dizajnit tënd */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+  
+  /* Sigurohu që kjo pjesë është aktive vetëm në mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN (TABLET & MOBILE) ========== */
+
+@media (max-width: 1024px) {
+    .hero-content {
+      width: 80%;
+      padding: 3rem;
+      bottom: 15%;
+    }
+  
+    .hero-content p {
+      font-size: 22px;
+      margin-left: 2rem;
+      line-height: 32px;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+  
+    .card {
+      margin: 20px 0;
+      width: 80%;
+      height: 300px;
+    }
+  
+    .card.card-1,
+    .card.card-3 {
+      margin: 0;
+    }
+  
+    .slider .slide {
+      padding: 20px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .logo {
+      height: 100px;
+    }
+  
+    .hero-content {
+      width: 90%;
+      padding: 2rem;
+      height: auto;
+      bottom: 10%;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  
+    .card {
+      height: 280px;
+    }
+  
+    .slide h1 {
+      font-size: 2rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slide p {
+      font-size: 16px;
+    }
+  
+    .nav-controls button {
+      font-size: 28px;
+      color: black;
+    }
+  
+    .row {
+      justify-content: center;
+    }
+  
+    .col {
+      flex: 0 0 40%;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 1rem;
+      bottom: 5%;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+      margin-left: 0.5rem;
+      text-align: center;
+    }
+  
+    .card {
+      width: 90%;
+      height: 250px;
+    }
+  
+    .slide h1 {
+      font-size: 1.6rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slide p {
+      font-size: 14px;
+    }
+  
+    
+  
+  }
+  

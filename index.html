@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIZIONI RINOR I SHALËS</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+<body>
+    <!-- Navbar (Mbetet i fiksuar mbi foto) -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="./index.html"><img src="logo.png" alt="URSH Logo" class="logo" /></a>
+        
+        <label class="hamburger">
+          <input type="checkbox" id="hamburger-toggle" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        
+    
+        <!-- Nav links -->
+        <div class="nav-links" id="nav-links">
+          <a href="./index.html">Ballina</a>
+          <a href="./home.html">Rreth nesh</a>
+          <a href="./projektet.html">Projektet</a>
+          <div class="dropdown">
+            <a href="#" class="dropbtn">Lajmet &#8595;</a>
+            <div class="dropdown-content">
+              <a href="./lajmet.html">VRSH në media</a>
+              <a href="./lajmetefundit.html">Lajmet e fundit</a>
+              <a href="./raportedhepublikime.html">Raporte dhe publikime</a>
+            </div>
+          </div>
+          <a href="./galeria.html">Galeria</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <script>
+      const toggle = document.getElementById("hamburger-toggle");
+      const navLinks = document.getElementById("nav-links");
+    
+      toggle.addEventListener("change", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+    
+    
+
+
+    
+    <div class="hero-section">
+        <div class="hero-content">
+            <p>Vizioni Rinor i  Shalës (VRSH) është një organizatë rinore,
+                joqeveritare dhe jofitimprurëse e cila ka për qëllim
+                fuqizimin e të rinjëve në vendimmarrje</p>
+        </div>
+    </div>
+
+    
+    <div class="cards-container">
+        <div class="card card-1">
+            <img src="./vrshl3.png" alt="Karta 1">
+            <div class="text-content">
+                <h2>Zhvillimi i Rinisë</h2> 
+                <p>Zhvillimi i rinisë është në thelb të misionit dhe vizionit të organizatës sonë, duke synuar një botë ku të rinjtë janë të aftë të qëndrojnë në mbrojtje të vetes dhe të tjerëve</p> 
+            </div>
+        </div>
+        <div class="card card-2">
+            <img src="./vrshl4.png" alt="Karta 2">
+            <div class="text-content">
+                <h2>Mjedisi</h2> 
+                <p>Mbrojtja e mjedisit dhe aktivizmi janë thelbësore për misionin e Vizioni Rinor i Shalës, duke fuqizuar të rinjtë të ndërmarrin hapa konkretë për mbrojtjen e natyrës dhe për të ndikuar pozitivisht në komunitetin e tyre</p>
+            </div>
+        </div>
+        <div class="card card-3">
+            <img src="./vrshl5.png" alt="Karta 3">
+            <div class="text-content">
+                <h2>Pjesëmarrja e Rinisë</h2> 
+                <p>Gjithëpërfshirja sociale dhe vendimmarrja e rinisë është një parim themelor për organizatën Vizioni Rinor i Shalës, duke u siguruar që të rinjtë nga të gjitha sferat shoqërore të kenë mundësi të barabarta për të marrë pjesë në aktivitetet tona dhe për të kontribuar në komunitet.</p>
+            </div>
+        </div>
+    </div>
+      
+   
+</head>
+
+
+<body>
+    <div class="container">
+      <!-- Set 1 -->
+      <div class="row">
+        <div class="col">
+          <div class="circle-container" data-percent="58.5">
+            <svg class="circle-svg" width="150" height="150">
+              <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+              <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+            </svg>
+            <div class="circle-text21"></div>
+          </div>
+          <div class="circle-label">2021</div>
+        </div>
+        <div class="col">
+          <div class="circle-container" data-percent="88.8">
+            <svg class="circle-svg" width="150" height="150">
+              <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+              <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+            </svg>
+            <div class="circle-text22"></div>
+          </div>
+          <div class="circle-label">2022</div>
+        </div>
+        <div class="col">
+          <div class="circle-container" data-percent="71.1">
+            <svg class="circle-svg" width="150" height="150">
+              <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+              <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+            </svg>
+            <div class="circle-text23"></div>
+          </div>
+          <div class="circle-label">2023</div>
+        </div>
+        <div class="col">
+          <div class="circle-container" data-percent="100">
+            <svg class="circle-svg" width="150" height="150">
+              <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+              <circle class="circle-progress" cx="75" cy="75" r="60" stroke-dasharray="377" stroke-dashoffset="377"></circle>
+            </svg>
+            <div class="circle-text24"></div>
+          </div>
+          <div class="circle-label">2024</div>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Progresi i rrethit
+      function updateCircle(circleEl, percentage) {
+        const progressCircle = circleEl.querySelector('.circle-progress');
+        const radius = progressCircle.getAttribute('r');
+        const circumference = 2 * Math.PI * radius;
+        const offset = circumference * (1 - percentage / 100);
+        progressCircle.style.strokeDasharray = circumference;
+        progressCircle.style.strokeDashoffset = offset;
+      }
+      
+      // Seti 1
+      document.querySelectorAll('.circle-container[data-percent]').forEach(circle => {
+        const percent = parseFloat(circle.getAttribute('data-percent'));
+        updateCircle(circle, percent);
+      });
+      
+      // Sa shume e vitit ka kalu
+      function getYearProgress(year) {
+        const currentDate = new Date();
+        const currentYear = currentDate.getFullYear();
+        if (currentYear > year) {
+          return 100;
+        } else if (currentYear < year) {
+          return 0;
+        } else {
+          const start = new Date(year, 0, 1);
+          const end = new Date(year + 1, 0, 1);
+          const passed = currentDate - start;
+          const total = end - start;
+          return Math.min(100, (passed / total) * 100);
+        }
+      }
+      
+      // Seti 2
+      document.querySelectorAll('.circle-container[data-year]').forEach(circle => {
+        const year = parseInt(circle.getAttribute('data-year'));
+        const progress = getYearProgress(year);
+        updateCircle(circle, progress);
+        const customText = circle.getAttribute('data-customtext');
+        circle.querySelector('.circle-text').textContent = customText;
+      });
+      
+      // madhesia e tekstit
+      function adjustCircleText() {
+        const containers = document.querySelectorAll('.circle-container');
+        containers.forEach(container => {
+          const textEl = container.querySelector('.circle-text');
+          textEl.style.fontSize = '24px';
+          let fontSize = 24;
+          // kalkulo gjeresine
+          const availableWidth = container.clientWidth * 0.6; // rrit madhesine sipas nevojes
+          while (textEl.offsetWidth > availableWidth && fontSize > 10) {
+            fontSize -= 1;
+            textEl.style.fontSize = fontSize + 'px';
+          }
+        });
+      }
+      
+      window.addEventListener('load', adjustCircleText);
+      window.addEventListener('resize', adjustCircleText);
+    </script>
+  </body>
+
+<head>
+<body>
+    
+<!-- Slider Section -->
+<div class="slider-container">
+  <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide">
+          <h1>Çfarë thotë rinia:</h1>
+          <img src="./assets/ndrsh1.jpg" alt="Foto 1">
+          <div class="slide-content">
+              <h2>Arbenita Krasniqi</h2>
+              <p>  Që nga momenti që fillova të angazhohem si vullnetare në organizatën "Vizioni Rinor i Shalës", për të socializuar dhe ndihmuar të rinjtë, përjetova një ndryshim të madh në jetën time. Përmes kësaj organizate, kam pasur mundësinë të marr pjesë në shumë aktivitete të ndryshme, trajnime dhe projekte që kanë ndikuar thellësisht në zhvillimin tim personal dhe profesional. Shembull projekti ''Njeriu dhe shëndeti'' më ka mësuar mua se si duhet të ruaj shëndetin tim, të ha shëndetshëm, të bëjë aktivitete fizike etj. Puna ime vullnetare më ka dhënë një ndjenjë të madhe të realizmit dhe kënaqësisë, duke më bërë të ndihem pjesë e një qëllimi më të madh për të sjellë ndryshime pozitive në komunitet. Është një përvojë që më ka frymëzuar dhe më ka bërë të ndjehem e lumtur që po jap kontributin tim në rritjen dhe zhvillimin e të rinjve.</p>
+          </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+          <h1 class="erjonah1">Çfarë thotë rinia:</h1>
+          <img src="./assets/IMG_0388.jpg" alt="Foto 2">
+          <div class="slide-content">
+              <h2>Erjona Beqiri</h2>
+              <p>Vizionin Rinor i Shalës ka pasur një ndikim shumë pozitiv në jetën time. Aktivitetet dhe programet e tij kanë ofruar mundësi për zhvillim personal 
+                  dhe profesional, duke më inkurajuar të angazhohem në projekte të rëndësishme për komunitetin. Kam fituar aftësi të reja, kam ndërtuar marrëdhënie
+                   me njerëz të tjerë të rinj dhe kam ndier një ndjesi të thellë përfaqësimi dhe përfshirjeje. Kjo përvojë më ka ndihmuar të rritem si individ dhe të kontribuoj
+                   më shumë në zhvillimin e shoqërisë.</p>
+          </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+          <h1 class="dionih1">Çfarë thotë rinia:</h1>
+          <img src="./assets/image00002.jpg" alt="Foto 3">
+          <div class="slide-content">
+              <h2>Dion Limolli</h2>
+              <p>Vizioni Rinor i Shalës ka pasur një ndikim të madh tek unë, duke më ndihmuar të zhvillohem si individ dhe si pjesë e një komuniteti aktiv.
+                  Përmes pjesëmarrjes sime në projekte si "Rini Europiane," "Breathe Freely Shala" kam pasur mundësinë të kuptoj më mirë rëndësinë e
+                  përfshirjes së të rinjve në vendimmarrje dhe rolin që ne mund të luajmë në përmirësimin e shoqërisë. Vizioni më ka motivuar të jem më i zëshëm
+                  për çështjet që prekin komunitetin tim dhe të punoj për të bërë ndryshime pozitive. Trajnimet dhe aktivitetet e ndryshme më kanë ndihmuar të ndërtoj 
+                 aftësi të reja, si aftësitë e komunikimit dhe udhëheqjes, të cilat më kanë dhënë vetëbesim për të marrë iniciativa. Për më tepër, përfshirja ime në këto projekte 
+                 më ka bërë të ndiej një lidhje më të thellë me komunitetin tim, duke më frymëzuar të jem një shembull për të tjerët dhe të punoj për të ardhmen e përbashkët. 
+                 Vizioni Rinor i Shalës ka qenë një pikë kthese për mua, duke më treguar se edhe një individ i vetëm mund të bëjë ndryshim në shoqëri kur i jepet mundësia dhe 
+                 mbështetja e duhur.</p>
+          </div>
+      </div>
+  </div>
+  <!-- Butonat e navigimit -->
+   <!-- Butonat e navigimit me shigjeta dhe vijë në mes -->
+<div class="nav-controls">
+  <button class="prev" onclick="moveSlide(-1)"><i class="fas fa-arrow-left"></i></button> <!-- Shigjeta majtas -->
+
+  <button class="next" onclick="moveSlide(1)"><i class="fas fa-arrow-right"></i></button> <!-- Shigjeta djathtas -->
+</div>
+
+<script>
+  let slideIndex = 0;
+
+  function moveSlide(n) {
+      const slides = document.querySelector('.slider');
+      const totalSlides = document.querySelectorAll('.slide').length;
+      slideIndex += n;
+      if (slideIndex >= totalSlides) { slideIndex = 0; }
+      if (slideIndex < 0) { slideIndex = totalSlides - 1; }
+      slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+  }
+</script>
+
+    <div class="blankw"></div>
+  
+  <footer class="footer">
+    <div class="content">
+        <div class="map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1533354269045!2d20.9162598!3d42.5077966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135379e46721bc65%3A0x37b1b89a7a9fc6a2!2sVizioni%20Rinor%20i%20Shal%C3%ABs!5e0!3m2!1sen!2s!4v1710937200000!5m2!1sen!2s" 
+                width="384" 
+                height="384" >
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        
+        <div class="info" >
+            <p><strong>Numri i telefonit:</strong> <br> <a href="tel:+38345894013">+383 45 89 40 13</a></p>
+            <p><strong>Adresa Fizike:</strong><br> Komuna-Lipjan, Fshati-Shalë, 
+            <br>  Rruga: Brigada 121, Objekti 'Zyra e 
+            <br> Gjendjes Civile'</p>
+            <p><strong>Email:</strong><br> <a href="mailto:vizionirinorishales@gmail.com">vizionirinorishales@gmail.com</a></p>
+        
+    <div class="footer-icons">
+            <a href="https://www.tiktok.com/@vizionirinor"><img src="./assets/tik1.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/vizionirinorishales/"><img src="./assets/inst2.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/vizionirinorishales"><img src="./assets/fac3.png" alt="TikTok"></a>
+    </div>
+        </div>
+    </div>
+    <p class="description">“Vizion Rinor i Shalës (VRSH) është një organizatë rinore, joqeveritare
+      <br> dhe jofitimprurëse e cila ka për qëllim fuqizimin e të rinjëve në vendimmarrje”.</p>
+</footer>
+</div>
+  
+</body>
+</head>
+
+</html>

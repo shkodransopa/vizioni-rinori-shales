@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizioni Rinori I Shales</title>
+
+    <link rel="stylesheet" href="footer.css">
+    
+
+    <style>
+    * {
+        font-family: Calibri, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+    }
+
+
+/* ---------- NAVBAR (MBËRTHYER NË FOTO) ---------- */
+/* ---------- NAVBAR (STIL I RIPËRSHITUR) ---------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 8%; /* Më i ngushtë vertikalisht */
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-left: -1.9rem; 
+    height: 150px; /* Logo më e madhe */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Animacion hover për logo */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.2rem; 
+    margin-right: -1.5%;/* Hapësirë më e vogël midis linkeve */
+}
+
+.nav-links a {
+    color: #433939 ;
+    text-decoration: none;
+    font-weight: 600; /* Tekst më i trashë */
+    font-size: 1rem; /* Madhësi pak më e vogël */
+    padding: 0.4rem 0.8rem; /* Padding më kompakt */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3e2f2f ;
+   
+    transform: translateY(-2px); /* Efekt hover më dinamik */
+}
+
+/* Stilizimi i dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    color: #433939;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #3e2f2f;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    color: #433939;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block; /* Ndrysho në inline-block për rreshtim të saktë */
+}
+
+.dropbtn:hover {
+    color: #3e2f2f;
+    transform: translateY(-2px);
+}
+    
+    .container {
+        width: 900px;
+        margin: 200px auto;
+    }
+
+    /* Stilet për menunë në anën e majtë */
+    .sidebar {
+    
+
+    position: relative;
+    float: left;
+    width: 100%;
+    }
+
+    .ul1{
+        margin-left: 50px;
+        margin-bottom: 70px;
+    }
+
+    .sidebar h2 {
+        color: rgba(5, 169, 244, 0.4);
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    .sidebar ul li img {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: rgba(5, 169, 244, 0.4);
+        font-weight: bold;
+        font-size: 30px;
+        transition: color 0.3s ease;
+    }
+
+    .sidebar ul li:hover {
+        background: #f5f5f5;
+    }
+
+    .sidebar ul li:hover a {
+        color: #99000028;
+    }
+
+    .sidebar .active {
+        color: #990000;
+        font-weight: bold;
+    }
+
+    .sidebar .active a {
+        color: rgba(5, 169, 244, 0.4);
+    }
+
+    /* Stilet për raportet */
+    .report-box {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid #007bff;
+        transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    .report-box:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .pdf-icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    .report-content {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .report-content a {
+        text-decoration: none;
+        color: #0056b3;
+        font-weight: bold;
+        font-size: 16px;
+        max-width: 70%;
+    }
+
+    .report-content a:hover {
+        text-decoration: underline;
+    }
+
+    .report-date {
+        color: #555;
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100px;
+    margin: 50px auto;
+    gap: 20px;
+}
+
+/* Kontejneri i raporteve */
+.container {
+    flex: 2; /* Merr më shumë hapësirë */
+}
+
+/* Sidebar në fund të raporteve në anën e majtë */
+.sidebar {
+    flex: 1;
+    position: relative;
+    top: 0;
+}
+
+
+
+
+
+
+/* Responsive për tablet (<= 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .report-content a {
+        font-size: 14px;
+    }
+
+    .report-date {
+        font-size: 12px;
+    }
+
+    .sidebar h2 {
+        font-size: 30px;
+    }
+
+    .sidebar ul li a {
+        font-size: 24px;
+    }
+}
+
+/* Responsive për mobile (<= 480px) */
+@media (max-width: 480px) {
+    .sidebar h2 {
+        font-size: 24px;
+    }
+
+    .sidebar ul li a {
+        font-size: 20px;
+    }
+
+    .report-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .report-content a {
+        max-width: 100%;
+    }
+
+    .pdf-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .ul1 {
+        margin-left: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hamburger button – shfaqet vetëm në mobile */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #433939;
+}
+
+/* Responsive për pajisje të vogla (telefon, tablet) */
+@media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 50%;
+      height: 100vh;
+      background-color: #81d4fa; /* Ngjyra si në foto */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 2rem;
+      gap: 1.5rem;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+  
+    .nav-links.active {
+      right: 0;
+    }
+  
+    .nav-links a {
+      color: #000;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  
+    .hamburger {
+      display: block;
+      z-index: 1001;
+    }
+  
+    .dropdown-content {
+      position: static;
+      box-shadow: none;
+      background-color: transparent;
+      display: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown .dropbtn:focus + .dropdown-content,
+    .dropdown-content:hover {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #433939; /* Ngjyra sipas dizajnit tënd */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .hamburger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+  }
+  
+  .hamburger span:nth-of-type(3) {
+    top: 100%;
+    transform: translateY(-100%);
+    transform-origin: left center;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  
+  .hamburger input:checked ~ span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+  }
+  
+  /* Sigurohu që kjo pjesë është aktive vetëm në mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== RESPONSIVE DESIGN (TABLET & MOBILE) ========== */
+
+@media (max-width: 1024px) {
+    .hero-content {
+      width: 80%;
+      padding: 3rem;
+      bottom: 15%;
+    }
+  
+    .hero-content p {
+      font-size: 22px;
+      margin-left: 2rem;
+      line-height: 32px;
+    }
+  
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px;
+    }
+  
+    .card {
+      margin: 20px 0;
+      width: 80%;
+      height: 300px;
+    }
+  
+    .card.card-1,
+    .card.card-3 {
+      margin: 0;
+    }
+  
+    .slider .slide {
+      padding: 20px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .logo {
+      height: 100px;
+    }
+  
+    .hero-content {
+      width: 90%;
+      padding: 2rem;
+      height: auto;
+      bottom: 10%;
+    }
+  
+    .hero-content p {
+      font-size: 18px;
+      line-height: 28px;
+      margin-left: 1rem;
+      text-align: left;
+    }
+  
+    .card {
+      height: 280px;
+    }
+  
+    .slide h1 {
+      font-size: 2rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.5rem;
+    }
+  
+    .slide p {
+      font-size: 16px;
+    }
+  
+    .nav-controls button {
+      font-size: 28px;
+      color: black;
+    }
+  
+    .row {
+      justify-content: center;
+    }
+  
+    .col {
+      flex: 0 0 40%;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+  }
+  
+  @media (max-width: 480px) {
+    .hero-content {
+      padding: 1rem;
+      bottom: 5%;
+    }
+  
+    .hero-content p {
+      font-size: 16px;
+      margin-left: 0.5rem;
+      text-align: center;
+    }
+  
+    .card {
+      width: 90%;
+      height: 250px;
+    }
+  
+    .slide h1 {
+      font-size: 1.6rem;
+    }
+  
+    .slide h2 {
+      font-size: 1.2rem;
+    }
+  
+    .slide p {
+      font-size: 14px;
+    }
+  
+    
+  
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+          <a href="./index.html"><img src="logo.png" alt="URSH Logo" class="logo" /></a>
+          
+          <label class="hamburger">
+            <input type="checkbox" id="hamburger-toggle" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          
+      
+          <!-- Nav links -->
+          <div class="nav-links" id="nav-links">
+            <a href="./index.html">Ballina</a>
+            <a href="./home.html">Rreth nesh</a>
+            <a href="./projektet.html">Projektet</a>
+            <div class="dropdown">
+              <a href="#" class="dropbtn">Lajmet &#8595;</a>
+              <div class="dropdown-content">
+                <a href="./lajmet.html">VRSH në media</a>
+                <a href="./lajmetefundit.html">Lajmet e fundit</a>
+                <a href="./raportedhepublikime.html">Raporte dhe publikime</a>
+              </div>
+            </div>
+            <a href="./galeria.html">Galeria</a>
+          </div>
+        </div>
+      </nav>
+  
+  
+      <script>
+        const toggle = document.getElementById("hamburger-toggle");
+        const navLinks = document.getElementById("nav-links");
+      
+        toggle.addEventListener("change", () => {
+          navLinks.classList.toggle("active");
+        });
+      </script>
+
+  
+
+    <div class="container">
+        <div class="report-box">
+            <img src="./assets/rp1.jpg" alt="PDF" class="pdf-icon">
+            <div class="report-content">
+                <a href="https://drive.google.com/file/d/1egwFKJdvnrdBPn8emwP6Zbb-i7Gqxklb/view?usp=sharing" target="_blank">Broshurë informuese për 8-vjetorin e organizatës</a>
+                <div class="report-date">9/2021</div>
+            </div>
+        </div>
+
+        <div class="report-box">
+            <img src="./assets/rp2.jpg" alt="PDF" class="pdf-icon">
+            <div class="report-content">
+                <a href="https://drive.google.com/file/d/15lcHxyjONIUPzwbGiqKAejJsKTyafHQd/view?usp=sharing" target="_blank">Broshurë informuese mbi objektet e trashëgimisë kulturore e natyrore të fshatit Shalë dhe fshatrave përreth</a>
+                <div class="report-date">11/2020</div>
+            </div>
+        </div>
+
+        <div class="report-box">
+            <img src="./assets/rp3.jpg" alt="PDF" class="pdf-icon">
+            <div class="report-content">
+                <a href="https://drive.google.com/file/d/12e_bs72cJHizuLp9MtjqmvqazK9RRsjq/view?usp=sharing" target="_blank">Raport mbi rezultatet e pyetësorit mbi përceptimet e nxënësve në lidhje me qeverisjen lokale</a>
+                <div class="report-date">9/2022</div>
+            </div>
+        </div>
+
+        <div class="report-box">
+            <img src="./assets/rp4.jpg" alt="PDF" class="pdf-icon">
+            <div class="report-content">
+                <a href="https://drive.google.com/file/d/1jHcAzc2gENWXzqJHDZjtO2AQbxBxs3TM/view?usp=sharing" target="_blank">Raport mbi rezultatet e pyetësorit mbi besimin në Policinë e Kosovës - Stacionin Policor në Lipjan</a>
+                <div class="report-date">12/2023</div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+
+      <!-- Sidebar për Accountability -->
+      <div class="sidebar">
+        <h2 class="ul1">LLOGARIDHËNIA JONË</h2>
+        <ul class="ul1">
+            <li class="active">
+                <img src="./assets/1221.png" alt="icon">
+                <a href="">LLOGARIDHËNIA</a>
+            </li>
+            <li>
+                <img src="./assets/icon2.png" alt="icon">
+                <a href="">POLITIKAT TONA</a>
+            </li>
+            <li>
+                <img src="./assets/icon3.png" alt="icon">
+                <a href="">RAPORTE TE AUDITORIT</a>
+            </li>
+            <li>
+                <img src="./assets/icon4.png" alt="icon">
+                <a href="">RAPORTE VJETORE</a>
+            </li>
+        </ul>
+ 
+
+
+    
+        <footer class="footer">
+            <div class="content">
+                <div class="map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2935.1533354269045!2d20.9162598!3d42.5077966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135379e46721bc65%3A0x37b1b89a7a9fc6a2!2sVizioni%20Rinor%20i%20Shal%C3%ABs!5e0!3m2!1sen!2s!4v1710937200000!5m2!1sen!2s" 
+                        width="384" 
+                        height="384" >
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                
+                <div class="info" >
+                    <p><strong>Numri i telefonit:</strong> <br> <a href="tel:+38345894013">+383 45 89 40 13</a></p>
+                    <p><strong>Adresa Fizike:</strong><br> Komuna-Lipjan, Fshati-Shalë, 
+                    <br>  Rruga: Brigada 121, Objekti 'Zyra e 
+                    <br> Gjendjes Civile'</p>
+                    <p><strong>Email:</strong><br> <a href="mailto:vizionirinorishales@gmail.com">vizionirinorishales@gmail.com</a></p>
+                
+            <div class="footer-icons">
+                    <a href="https://www.tiktok.com/@vizionirinor"><img src="./assets/tik1.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/vizionirinorishales/"><img src="./assets/inst2.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/vizionirinorishales"><img src="./assets/fac3.png" alt="TikTok"></a>
+            </div>
+                </div>
+            </div>
+            <p class="description">“Vizion Rinor i Shalës (VRSH) është një organizatë rinore, joqeveritare
+              <br> dhe jofitimprurëse e cila ka për qëllim fuqizimin e të rinjëve në vendimmarrje”.</p>
+        </footer>
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
